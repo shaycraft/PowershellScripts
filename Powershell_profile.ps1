@@ -17,7 +17,7 @@ function greps($strSearch)
 
 function du()
 {
-    $totalLength = Get-ChildItem -Recurse | Measure-Object -Property Length -Sum
+    $totalLength = Get-ChildItem -Recurse -Force | Measure-Object -Property Length -Sum
     "Length = {0:N6}" -f ($totalLength.Sum/1MB) + " MB"
 }
 
